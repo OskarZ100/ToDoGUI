@@ -11,25 +11,11 @@ class GFG {
     public static void main(String[] args)
     {
         // Creating instance of JFrame
-        JFrame frame = new JFrame();
-        frame = initialSetUp(frame);
-        
+        Frame frame = new Frame();
+        frame.setColorBkg(c_main);
+        frame.setIcon("logo.png");
+        frame.setTitle("!TO DO APP!");        
 
     }
 
-    public static JFrame initialSetUp(JFrame frame){
-        //setting basic contraints
-        frame.setTitle("!TO DO APP!");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        frame.setSize(700, 700);
-        frame.setLayout(null);
-        frame.setVisible(true);
-
-        //making the logo icon thing
-        ImageIcon logo = new ImageIcon("logo.png");
-        frame.setIconImage(logo.getImage());
-        frame.getContentPane().setBackground(c_main);
-        return frame;
-    }
 }
