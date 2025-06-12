@@ -17,9 +17,6 @@ class GFG {
         Frame frame = new Frame();
         frame.setColorBkg(c_main);
         frame.setIcon("logo.png");
-        frame.setTitle("!TO DO APP!");        
-
-
         
         
     }
