@@ -10,6 +10,7 @@ import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
@@ -38,9 +39,6 @@ public class Header extends JPanel{
         this.setBackground(null);
 
         //button action adding for clicks
-        this.button_add.addActionListener(e -> {
-            addButtonClicked();
-        });
         this.button_info.addActionListener(e -> {
             infoButtonClicked();
         });
@@ -89,13 +87,9 @@ public class Header extends JPanel{
 
     }
 
-    public void addButtonClicked(){
-        //new task screen
-        System.out.println("THE ADD BUTTON WAS CLICKED");
-    }
 
     public void infoButtonClicked(){
         //new task screen
-        System.out.println("THE INFO BUTTON WAS CLICKED");
+         JOptionPane.showMessageDialog(null, "programmed by oskar zincenko \n click add to add a task or thing to do");
     }
 }

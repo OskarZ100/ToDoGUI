@@ -13,12 +13,21 @@ class GFG {
     public static final Color c_main = new Color(46, 46, 45);
     public static void main(String[] args)
     {
+        //task counting removal moight use array
+        int countOfTasks = 0;
+
         // Creating instance of JFrame
         Frame frame = new Frame();
         frame.setColorBkg(c_main);
         frame.setIcon("logo.png");
         
         
+        frame.header.button_add.addActionListener(e -> {
+            addButtonClicked();
+        });
+    }
+    public static void addButtonClicked() {
+        System.out.println("infewni");
     }
 
     

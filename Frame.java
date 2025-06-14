@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 public class Frame extends JFrame{
 
     Header header = new Header();
+    PanelStorage taskHolder = new PanelStorage();
 
     public Frame(){
         this.setTitle("!TO DO APP!");
@@ -21,6 +22,7 @@ public class Frame extends JFrame{
         this.setLayout(new BorderLayout());
         this.setVisible(true);
         this.add(header, BorderLayout.NORTH);
+        this.add(taskHolder);
     }
 
     public void setColorBkg(Color color){
