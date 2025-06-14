@@ -27,6 +27,7 @@ public class TaskPanel extends JPanel{
         this.description = desc;
         this.textColor = color;
         this.taskNum = String.valueOf(number);
+        this.setBackground(new Color(51, 51, 51));
         
 
         //styling and sizing
@@ -42,6 +43,7 @@ public class TaskPanel extends JPanel{
         JTextArea l_desc = new JTextArea(description);
         JLabel l_tasknum = new JLabel(taskNum + ") ");
         JPanel topHold = new JPanel();
+        topHold.setBackground(null);
         topHold.setLayout(new FlowLayout(FlowLayout.LEFT));
         topHold.add(l_tasknum);
         topHold.add(l_name);
@@ -49,7 +51,7 @@ public class TaskPanel extends JPanel{
 
         wordStorage.add(l_desc);
         l_desc.setAlignmentY(SwingConstants.TOP);
-        wordStorage.setBackground(Color.red);
+        wordStorage.setBackground(null);
         
         //styling the words
         Font font_task = new Font("Arial", Font.BOLD, 17);
@@ -57,6 +59,15 @@ public class TaskPanel extends JPanel{
         Font font_taskNum = new Font("Arial", Font.BOLD, 30);
         l_desc.setLineWrap(true);
         l_desc.setEditable(false);
+        l_desc.setBackground(null);
+        l_name.setBackground(null);
+        l_tasknum.setBackground(null);
+
+        l_name.setForeground(Color.white);
+        l_tasknum.setForeground(Color.white);
+        l_desc.setForeground(new Color(189, 189, 188));
+
+
 
 
         l_name.setFont(font_taskN);

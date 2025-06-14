@@ -14,15 +14,12 @@ public class PanelStorage extends JPanel{
         // layout and such 
         GridLayout layout = new GridLayout(4, 1, 0, 5);
         this.setLayout(layout);
-        this.setBackground(null);
-        this.add(new TaskPanel("Name", "yehahaha", "ddsd", 1));
-        this.add(new TaskPanel("Name2", "sdsd", "TOOL_TIP_TEXT_KEY", 1));
-        this.add(new TaskPanel("Name3", "sdsd", "TOOL_TIP_TEXT_KEY", 1));
-        this.add(new TaskPanel("Name4", "sdsd", "TOOL_TIP_TEXT_KEY", 1));
+        this.setBackground(new Color(31, 31, 31));
 
     }
 
     public void addTask(TaskPanel task){
         this.add(task);
     }
+
 }
