@@ -20,6 +20,7 @@ public class TaskPanel extends JPanel{
     String textColor;
     String taskNum;
     JPanel wordStorage = new JPanel(new BorderLayout());
+    JButton removeBtn = new JButton();
 
     public TaskPanel(String name, String desc, String color, int number){
         //basic init
@@ -77,12 +78,11 @@ public class TaskPanel extends JPanel{
         this.add(wordStorage, BorderLayout.WEST);
 
         //BUTTONS
-        JButton remove = new JButton();
-        remove.setPreferredSize(new Dimension(100,80));
-        remove.setText("REMOVE");
-        remove.setFocusPainted(false);
-        this.add(remove, BorderLayout.EAST);
-
+        removeBtn.setPreferredSize(new Dimension(100,80));
+        removeBtn.setText("REMOVE");
+        removeBtn.setFocusPainted(false);
+        this.add(removeBtn, BorderLayout.EAST);
+        
     }
 }
 

@@ -26,7 +26,6 @@ class GFG {
         frame.setColorBkg(c_main);
         frame.setIcon("logo.png");
         
-        
         frame.header.button_add.addActionListener(e -> {
             System.out.println("Yo adding buytton click");
             if(countOfTasks == 4){
@@ -42,10 +41,27 @@ class GFG {
         });
     }
     public static void addButtonClicked() {
-        //prompt
+        String name = "";
+        String desc = "";
+        String color = "";
+        int num; 
+        //prompt frame thing
+        PromptPanel frame2 = new PromptPanel();
+        if(frame2.isVisible()){
+            frame.header.button_add.setEnabled(false);
+        }
+
+        //the other stuff
         System.out.println("adding fr");
-        TaskPanel temp = new TaskPanel("name test", "hello", "idc", 0);
+        TaskPanel temp = new TaskPanel(name, desc, color, countOfTasks);
         frame.taskHolder.add(temp);
+        temp.removeBtn.addActionListener(e -> {
+            int get = Integer.parseInt(temp.taskNum);
+            frame.taskHolder.remove(tasks.get(get));
+            frame.taskHolder.revalidate();
+            frame.taskHolder.repaint();
+            countOfTasks -= 1;
+        });
         tasks.add(temp);
         countOfTasks += 1;
         frame.taskHolder.revalidate();
@@ -53,6 +69,9 @@ class GFG {
 
     }
 
+    public static void remove(){
+
+    }
     
 
 }
