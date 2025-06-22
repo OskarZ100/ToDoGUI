@@ -21,6 +21,7 @@ public class TaskPanel extends JPanel{
     String taskNum;
     JPanel wordStorage = new JPanel(new BorderLayout());
     JButton removeBtn = new JButton();
+    JLabel l_tasknum;
 
     public TaskPanel(String name, String desc, String color, int number){
         //basic init
@@ -42,7 +43,7 @@ public class TaskPanel extends JPanel{
         //adding words 
         JLabel l_name = new JLabel(name);
         JTextArea l_desc = new JTextArea(description);
-        JLabel l_tasknum = new JLabel(taskNum + ") ");
+        l_tasknum = new JLabel(taskNum + ") ");
         JPanel topHold = new JPanel();
         topHold.setBackground(null);
         topHold.setLayout(new FlowLayout(FlowLayout.LEFT));

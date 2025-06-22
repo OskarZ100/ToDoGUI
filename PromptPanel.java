@@ -22,8 +22,8 @@ public class PromptPanel extends JFrame{
     JPanel pan_desc = new JPanel();
     JPanel pan_submitArea = new JPanel();
 
-    JTextField text_name = new JTextField();
-        JTextArea text_desc = new JTextArea();
+    JTextField text_name = new JTextField(10);
+    JTextArea text_desc = new JTextArea();
     public PromptPanel(){
         //setting frame properteis 
         GridLayout layout = new GridLayout(3, 1, 0, 5);
@@ -36,7 +36,10 @@ public class PromptPanel extends JFrame{
         this.setLocationRelativeTo(null);
 
         //creating the text holders
-        
+        text_name.setDocument
+            (new JTextFieldLimit(10));
+        text_desc.setDocument
+            (new JTextFieldLimit(85));
         
         //panel 800, 150 
         //store all the things in a flowlayout panel
@@ -48,6 +51,7 @@ public class PromptPanel extends JFrame{
         //text feilds
         text_desc.setPreferredSize(new Dimension(200, 50));
         text_name.setPreferredSize(new Dimension(200, 20));
+        text_desc.setLineWrap(true);
 
 
         //panels styling
@@ -68,6 +72,9 @@ public class PromptPanel extends JFrame{
         pan_submitArea.add(l_all);
         pan_submitArea.add(submit_all);
 
+
+        //button
+        submit_all.setText("CLICK");
 
         //ADDING EVERYTHING
         this.add(pan_name);
